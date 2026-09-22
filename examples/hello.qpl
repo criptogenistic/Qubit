@@ -1,0 +1,10 @@
+program bell_state {
+    qreg q[2]
+    H(q[0])
+    CNOT(q[0], q[1])
+
+    bit a = measure(q[0])
+    bit b = measure(q[1])
+
+    print("Bell state result:", a, b)
+}
